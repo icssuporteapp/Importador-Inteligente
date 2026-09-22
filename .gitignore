@@ -1,7 +1,12 @@
+# Dependências e Pacotes Locais
 node_modules/
 .pnpm-store/
 .tools/
+
+# Configurações de IDE
 .vscode/
+
+# Pastas de Build, Saída e Temporárias (Heft / SPFx)
 lib/
 lib-commonjs/
 dist/
@@ -11,9 +16,25 @@ release/
 coverage/
 outputs/
 Homologacao/
-*.log
-*.tsbuildinfo
-.env*
-!.env.example
+
+# Pacotes e artefatos do SharePoint
 sharepoint/solution/debug/
 sharepoint/solution/*.sppkg
+
+# Logs e Informações de Build do TypeScript
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+*.tsbuildinfo
+
+# Variáveis de ambiente
+.env*
+!.env.example
+
+# Arquivos temporários do Sistema Operacional
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
