@@ -1,0 +1,11 @@
+import * as React from 'react';
+import { DefaultButton, DetailsList, DetailsListLayoutMode, SearchBox, SelectionMode } from '@fluentui/react';
+import { ValidationError } from '../../../models';
+import { validationAction, validationLocation } from '../../../services/validationPresentation';
+import styles from './Importador.module.scss';
+export const ErrorGrid: React.FC<{ errors: ValidationError[] }> = ({ errors }) => {
+  const [filter, setFilter] = React.useState(''); const [page, setPage] = React.useState(0); const term = filter.toLocaleLowerCase(); const pageSize = 50;
+  const items = errors.filter(e => !term || `${e.line} ${e.column} ${e.value} ${e.message} ${validationAction(e)}`.toLocaleLowerCase().includes(term)).map(e => ({ local: validationLocation(e), coluna: e.column || 'Arquivo', valor: e.value, erro: e.message, acao: validationAction(e), severidade: e.severity === 'error' ? 'Erro' : 'Aviso' }));
+  const pageCount = Math.max(1, Math.ceil(items.length / pageSize)); const currentPage = Math.min(page, pageCount - 1); const first = currentPage * pageSize;
+  return <><SearchBox placeholder="Filtrar erros e avisos" value={filter} onChange={(_, value) => { setFilter(value || ''); setPage(0); }} /><DetailsList items={items.slice(first, first + pageSize)} columns={[{ key: 'local', name: 'Local', fieldName: 'local', minWidth: 105, maxWidth: 155, isResizable: true }, { key: 'coluna', name: 'Coluna / cabeçalho', fieldName: 'coluna', minWidth: 120, isResizable: true }, { key: 'valor', name: 'Valor', fieldName: 'valor', minWidth: 100, isResizable: true }, { key: 'erro', name: 'Problema', fieldName: 'erro', minWidth: 220, isResizable: true }, { key: 'acao', name: 'Como corrigir', fieldName: 'acao', minWidth: 240, isResizable: true }, { key: 'severidade', name: 'Tipo', fieldName: 'severidade', minWidth: 60 }]} selectionMode={SelectionMode.none} layoutMode={DetailsListLayoutMode.justified} /><div className={styles.pagination}><span>{items.length.toLocaleString('pt-BR')} ocorrências · página {currentPage + 1} de {pageCount}</span><DefaultButton text="Anterior" disabled={currentPage === 0} onClick={() => setPage(currentPage - 1)} /><DefaultButton text="Próxima" disabled={currentPage + 1 >= pageCount} onClick={() => setPage(currentPage + 1)} /></div></>;
+};

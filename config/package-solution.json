@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "Importador Inteligente de Listas SharePoint",
+    "id": "c5393fa6-268a-45f5-9b23-64a08c9ee37d",
+    "version": "1.0.0.10",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.23.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "Validação e importação guiada de Excel em listas SharePoint"
+      },
+      "longDescription": {
+        "default": "Pesquisa listas permitidas, valida planilhas e importa novos itens usando a identidade atual, com auditoria central opcional."
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": ["Productivity"]
+    },
+    "features": [
+      {
+        "title": "Importador Inteligente",
+        "description": "Ativa o Importador Inteligente de Listas SharePoint.",
+        "id": "f4a71409-33d1-4d9b-a32f-3739431970fe",
+        "version": "1.0.0.10"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/importador-spfx.sppkg"
+  }
+}

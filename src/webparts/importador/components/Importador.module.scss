@@ -1,0 +1,19 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+.importador { color: var(--bodyText, #242424); background: var(--bodyBackground, #fff); padding: 24px; min-height: 520px; box-sizing: border-box; font-family: $ms-font-family-fallbacks; }
+.hero { display: flex; justify-content: space-between; gap: 24px; align-items: flex-end; padding: 8px 0 24px; border-bottom: 1px solid #e5e5e5; margin-bottom: 20px; h1 { font-size: 30px; margin: 4px 0 8px; } p { margin: 0; max-width: 720px; } }
+.eyebrow { color: var(--link, #0f6cbd); font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.card { border: 1px solid #e1dfdd; border-radius: 8px; padding: 20px; margin: 16px 0; box-shadow: 0 1px 3px rgba(0,0,0,.05); h2 { font-size: 20px; margin: 4px 0 7px; } p { margin: 0 0 16px; color: #605e5c; } }
+.cardHeader { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; }
+.inline { display: grid; grid-template-columns: minmax(220px, 1fr) auto; align-items: end; gap: 12px; margin-bottom: 12px; }
+.searchPanel { display: grid; gap: 10px; }
+.resultList { display: grid; gap: 8px; max-height: 340px; overflow-y: auto; }
+.resultButton { height: auto; min-height: 52px; text-align: left; :global(.ms-Button-flexContainer) { display: flex; flex-direction: column; align-items: flex-start; padding: 8px 0; } span { font-size: 12px; color: #605e5c; } }
+.file { display: grid; gap: 7px; padding: 16px; border: 1px dashed #8a8886; border-radius: 6px; margin: 12px 0; input { font: inherit; } small { color: #605e5c; } }
+.mapping { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px; margin: 12px 0 18px; }
+.metrics { display: grid; grid-template-columns: repeat(5, minmax(90px, 1fr)); gap: 10px; margin: 16px 0; div { border-left: 4px solid #0f6cbd; background: #f8f8f8; padding: 12px; } span { display: block; color: #605e5c; font-size: 12px; } strong { display: block; font-size: 24px; margin-top: 3px; } }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; margin-top: 14px; }
+.pagination { display: flex; gap: 10px; align-items: center; justify-content: flex-end; margin-top: 12px; span { color: #605e5c; margin-right: auto; } }
+.validOnly { margin: 12px 0 16px; padding: 12px; background: #fff4ce; border-radius: 4px; }
+.importLog { margin: 16px 0; h3 { font-size: 16px; margin: 0 0 10px; } > div { overflow-x: auto; } table { width: 100%; border-collapse: collapse; min-width: 620px; } th, td { border-bottom: 1px solid #e1dfdd; padding: 8px; text-align: left; vertical-align: top; } th { font-size: 12px; } p { margin: 8px 0; } }
+.importador footer { color: #605e5c; border-top: 1px solid #e5e5e5; margin-top: 24px; padding-top: 14px; font-size: 12px; }
+@media (max-width: 700px) { .importador { padding: 14px; } .hero, .cardHeader { flex-direction: column; align-items: stretch; } .metrics { grid-template-columns: repeat(2, 1fr); } .inline { grid-template-columns: 1fr; } .pagination { flex-wrap: wrap; span { flex-basis: 100%; } } }

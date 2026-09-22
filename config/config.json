@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "importador-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/importador/ImportadorWebPart.js",
+          "manifest": "./src/webparts/importador/ImportadorWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ImportadorWebPartStrings": "lib/webparts/importador/loc/{locale}.js"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "importador-spfx",
+    "environment": "spo",
+    "packageManager": "npm",
+    "skipFeatureDeployment": true,
+    "useGulp": false,
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "Importador",
+    "componentDescription": "Importador Inteligente de Listas SharePoint",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "22.23.2",
+    "sdksVersions": {},
+    "version": "1.23.2",
+    "libraryName": "importador-spfx",
+    "libraryId": "c5393fa6-268a-45f5-9b23-64a08c9ee37d",
+    "solutionShortDescription": "importador-spfx description",
+    "isDomainIsolated": false
+  }
+}
